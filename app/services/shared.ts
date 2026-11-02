@@ -129,7 +129,7 @@ export const DEFAULT_ENGAGEMENTS: readonly Engagement[] = [
     title: 'Diagnostic',
     length: 'About 2 weeks',
     body: 'Fixed scope, fixed price. Ends in a written plan you keep, whether or not we work together after.',
-    price: { fill: 'starting price, or “on request”' },
+    price: 'Free for now',
   },
   {
     title: 'Fractional',

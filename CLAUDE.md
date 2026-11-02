@@ -1,6 +1,6 @@
 # nalviduro.com — rules for this folder
 
-> Read this, then `STATE.md`, then act. This is a small, static consulting site. Keep it that way.
+> Read this, then `STATE.md`, then act. This is a small consulting site with no database and no accounts. Keep it that way.
 
 ## What this is
 
@@ -8,11 +8,11 @@ The consulting front door. Clients hire Nalvi here (launch / project-management 
 
 ## Hard rules
 
-- Static only. No accounts, no payments, no forms that store data, no client data of any kind. Booking = link to a Google Calendar appointment schedule. Contact = mailto.
-- The copy's source of truth is `content/` (`OFFER.md`, `case-studies/*.md`, `BIO.md`). Edit content there first, then mirror into `site/`. Never let `site/index.html` drift from `content/`.
+- No database, no accounts, no payments, no forms that store data, no client data of any kind. Booking = link to a Google Calendar appointment schedule. Contact = mailto.
+- The copy's source of truth is `content/` (`OFFER.md`, `case-studies/*.md`, `BIO.md`). Edit content there first, then mirror into `app/`. Never let the pages in `app/` drift from `content/`.
 - Case studies name a client only after that client has said yes in writing (note the date in the case-study file). Until then the study is anonymised ("a Tampa entertainment company").
 - No bioinformatics jargon in the launch-consulting track and vice versa. Two tracks, one operator.
-- Deploy = push to `main` → Cloudflare Pages. Push only on Nalvi's explicit yes (same rule as pakëzdritë).
+- Deploy = push to `main` → Railway. Push only on Nalvi's explicit yes (same rule as pakëzdritë).
 - Nothing financial here (rates may be stated as "from $X" only once Nalvi sets them; PA-10 still applies to everything else).
 
 ## Layout
@@ -24,15 +24,18 @@ The consulting front door. Clients hire Nalvi here (launch / project-management 
 | `content/OFFER.md` | the offer: who, what, method, packages, next step — the master copy |
 | `content/BIO.md` | the operator bio, track record with numbers |
 | `content/case-studies/<slug>.md` | one per engagement; frontmatter `public: yes/no` and `client_ok: <date>` |
-| `site/` | the deployable static site (`index.html`, `style.css`, `assets/`). Cloudflare Pages root = `site/` |
+| `app/` | the deployable site: Next.js 16 App Router, pages in `app/`, palette in `app/nalvi.css`, media and the vCard in `public/` |
+| `site/` | legacy static scaffold, not deployed; to be deleted once its copy is ported into `app/` |
 | `scripts/` | helpers (none yet) |
 
 ## Session protocol
 
-Start: read `STATE.md`; check `content/` vs `site/` for drift. End: rewrite `STATE.md`; append a line to `~/Desktop/PA/log/<today>.md`; update `~/Desktop/PA/briefs/nalviduro.md` if anything durable changed.
+Start: read `STATE.md`; check `content/` vs `app/` for drift; run `pnpm check` before any push. End: rewrite `STATE.md`; append a line to `~/Desktop/PA/log/<today>.md`; update `~/Desktop/PA/briefs/nalviduro.md` if anything durable changed.
 
 ## Stack decisions
 
-- Plain HTML + CSS, one page to start, Google Fonts only. No framework, no build step — the site must stay editable in five minutes a quarter.
-- Add pages only when a case study is long enough to need one (`site/work/<slug>.html`).
-- Domain: nalviduro.com registered at Cloudflare 2026-10-28, auto-renews 2027-10-28. DNS → Cloudflare Pages project `nalviduro`.
+- Next.js 16 (App Router), TypeScript, Tailwind v4, pnpm (see `README.md`). Moved here from `pakezdrite.com/nalvi` (pakezdrite D-65 / PERS-30). No database, no accounts.
+- Keep `pakezdrite.com/nalvi/…` redirects in `next.config.ts` working: the printed wallpaper QR codes point at `pakezdrite.com/nalvi/card`.
+- Anything only Nalvi can supply is a `{ fill }` value in `app/services/shared.ts`; it shows as a marked placeholder on the page until filled.
+- Booking: one constant, `BOOKING_URL` in `app/NalviPage.tsx` (Google Calendar appointment schedule). Contact: `nalviduro1@gmail.com` via mailto.
+- Domain: nalviduro.com registered at Cloudflare 2026-10-28, auto-renews 2027-10-28. Hosting: Railway, deploys from `main`.
