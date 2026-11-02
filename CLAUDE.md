@@ -8,7 +8,7 @@ The consulting front door. Clients hire Nalvi here (launch / project-management 
 
 ## Hard rules
 
-- Static only. No accounts, no payments, no forms that store data, no client data of any kind. Booking = Calendly link. Contact = mailto.
+- Static only. No accounts, no payments, no forms that store data, no client data of any kind. Booking = link to a Google Calendar appointment schedule. Contact = mailto.
 - The copy's source of truth is `content/` (`OFFER.md`, `case-studies/*.md`, `BIO.md`). Edit content there first, then mirror into `site/`. Never let `site/index.html` drift from `content/`.
 - Case studies name a client only after that client has said yes in writing (note the date in the case-study file). Until then the study is anonymised ("a Tampa entertainment company").
 - No bioinformatics jargon in the launch-consulting track and vice versa. Two tracks, one operator.

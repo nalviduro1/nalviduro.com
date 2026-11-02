@@ -24,13 +24,13 @@ I help owner-operators turn a service, a product, or a dataset into something th
 | G3 — Launch | live product, runbook, 30 days of fixes | handover |
 
 ## Packages
-- **Discovery + Plan** — fixed price, TODO: $____ (or "quoted on the call"). Two weeks. Output: the G1 and G2 documents. You can take them anywhere.
+- **Discovery + Plan** — free for now. Two weeks. Output: the G1 and G2 documents. You can take them anywhere.
 - **Build & launch** — scoped from the plan; hosted on pakëzdritë or on your stack.
 - **Pipeline engagement** — scoped per dataset; deliverable is a repository plus a report.
 
 ## Next step
-Book a 30-minute call: TODO: Calendly URL
-Email: TODO: hello@nalviduro.com (or chosen address)
+Book a 30-minute call: https://calendar.app.google/sR7U3TjHeMdN5w7d6
+Email: nalviduro1@gmail.com
 
 ## Proof to link (public, inspectable)
 - pakezdrite.com — bilingual marketplace, live since 2026-09-25, moderation, Stripe, SEO.
