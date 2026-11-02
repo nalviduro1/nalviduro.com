@@ -256,7 +256,8 @@ export const CASE_AANO_TAMPA: Case = {
   role: 'President of the AANO Tampa Bay chapter; Secretary of the National Albanian Registry.',
   shipped:
     'Chapter meetups and events on the Gulf Coast, and a registry that counts Albanians in the United States.',
-  changed: { fill: 'members, events or registrations you can share' },
+  changed:
+    'The Tampa chapter hosted the 2026 national convention (209 seated, August 7–9). I organised its women’s networking event on October 17: venue, four featured guests and RSVPs, with 39 signed up the week before.',
 };
 
 export const CASE_NAR: Case = {
