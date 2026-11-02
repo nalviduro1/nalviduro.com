@@ -135,13 +135,13 @@ export const DEFAULT_ENGAGEMENTS: readonly Engagement[] = [
     title: 'Fractional',
     length: 'Set hours a week, ongoing',
     body: 'Your project manager or product owner on a set number of hours a week: backlog, planning, stakeholders and status.',
-    price: { fill: 'monthly or hourly rate, or “on request”' },
+    price: 'On request',
   },
   {
     title: 'Project',
     length: 'Fixed scope',
     body: 'A defined deliverable in milestones, each ending at a gate and a written handback.',
-    price: { fill: 'how you price a project, or “on request”' },
+    price: 'On request',
   },
 ];
 
