@@ -62,6 +62,8 @@ export type ServiceSpec = {
   headline: string;
   lead: string;
   fields?: readonly Field[];
+  /** Heading of the `fields` section; defaults to the offers' "What I work on". */
+  fieldsTitle?: string;
   who: readonly string[];
   services: readonly Service[];
   /** PERS-27 (D-60): the figure is the first thing on the page, above the hero; `clip` is a moving picture, not a wide diagram. */

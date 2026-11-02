@@ -310,7 +310,8 @@ function sectionLinks(spec: ServiceSpec): { id: string; label: string }[] {
       links.push({ id: 'publications', label: PUBLICATIONS_LABEL });
     return links;
   }
-  if (spec.fields?.length) links.push({ id: 'fields', label: FIELDS_TITLE });
+  if (spec.fields?.length)
+    links.push({ id: 'fields', label: spec.fieldsTitle ?? FIELDS_TITLE });
   if (spec.who.length) links.push({ id: 'who', label: WHO_TITLE });
   if (spec.services.length)
     links.push({ id: 'services', label: SERVICES_TITLE });
@@ -431,7 +432,7 @@ export function ServicePage({ spec }: { spec: ServiceSpec }) {
           )}
 
           {fields.length > 0 && (
-            <Section id="fields" title={FIELDS_TITLE}>
+            <Section id="fields" title={spec.fieldsTitle ?? FIELDS_TITLE}>
               <ul className="nalvi-pm-grid nalvi-pm-grid--4">
                 {fields.map((d) => (
                   <li key={d.title} className="nalvi-pm-card">
@@ -489,7 +490,13 @@ export function ServicePage({ spec }: { spec: ServiceSpec }) {
                     </li>
                   ))}
                 </ol>
-                <p className="nalvi-pm-note">{METHOD_PROOF}</p>
+                <p className="nalvi-pm-note">
+                  {METHOD_PROOF}{' '}
+                  <a href="/work/ticketing">
+                    How ticketing and payments are built
+                  </a>
+                  .
+                </p>
               </Section>
 
               <Section id="engage" title={ENGAGE_TITLE}>
