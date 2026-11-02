@@ -1,0 +1,15 @@
+# Build scripts we explicitly allow to run on install.
+# All three are compiled components of the locked stack, not optional extras:
+#   @swc/core       – Next.js's compiler
+#   esbuild         – used by Vitest and tsx
+#   @parcel/watcher – file watching for Tailwind and Next dev
+allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
+  esbuild: true
+
+# Refuse packages published in the last 3 days. A freshly-published version is
+# where a compromised maintainer account shows up first; nothing here needs to
+# be that current. Raising this is a deliberate act, not a default.
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
