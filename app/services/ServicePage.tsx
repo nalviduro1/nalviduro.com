@@ -25,6 +25,7 @@ import {
   FIGURES_LABEL,
   HOME_LABEL,
   isFill,
+  GATE_DECIDES,
   METHOD,
   METHOD_PROOF,
   type ServiceSpec,
@@ -476,7 +477,15 @@ export function ServicePage({ spec }: { spec: ServiceSpec }) {
                   {METHOD.map((m) => (
                     <li key={m.title}>
                       <h3 className="nalvi-pm-h3">{m.title}</h3>
-                      <p>{m.body}</p>
+                      <p>{m.question}</p>
+                      <p>
+                        <strong>You get:</strong> {m.get}
+                      </p>
+                      {m.gate && (
+                        <p className="nalvi-pm-gate">
+                          <strong>{m.gate}.</strong> {GATE_DECIDES[m.gate]}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ol>

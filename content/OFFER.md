@@ -16,15 +16,19 @@ I help owner-operators turn their vision into reality.
 **Bioinformatics & pipelines.** Long-read assembly, pangenomes, metabolomics/PheWAS, HPC workflow engineering on LSF. Pipelines delivered as public, tested repositories.
 
 ## Method (the part that's named)
-| Gate | You get | Decides |
-|---|---|---|
-| Intake | 30-minute call, one-page problem statement | whether we should work together |
-| G1 — Discovery | what you sell, to whom, what the site/pipeline must do; buy-vs-build map | scope |
-| G2 — Plan | backlog, dates, cost, what's rented vs owned | go / no-go |
-| G3 — Launch | live product, runbook, 30 days of fixes | handover |
+Source: `~/Desktop/PA/Project_Management/PLAYBOOK.md` — if this differs, the playbook wins. Phase names, gate names and questions are its wording; "You get" is its exit deliverable in client language.
+
+| Phase | Question | You get | Gate (you decide) |
+|---|---|---|---|
+| Intake | Should we do this, and on what basis? | 30-minute call, written intake; paid / favor / equity decided | — |
+| Discovery | What exactly is being launched, for whom, and what does "launched" mean? | a charter: goal, scope in/out, success metrics, stakeholders, constraints, assets audit | — |
+| Plan | How do we get there and by when? | milestones, work breakdown, owners, dates, risk log, cadence; proposal and engagement letter if paid | **G1 — plan approved** |
+| Build | Are we making the thing, on track, with scope under control? | weekly status, meeting notes, change requests, the deliverables | **G2 — launch readiness** (checklist green, or red you accept in writing) |
+| Launch | Does it go live cleanly, and does it work in the first two weeks? | launch checklist run, go/no-go record, launch-day runbook, review at +14 days | — |
+| Close | Can the client run it without me, and what did we learn? | handoff, training, access transfer, retrospective | **G3 — closed** |
 
 ## Packages
-- **Discovery + Plan** — free for now. Two weeks. Output: the G1 and G2 documents. You can take them anywhere.
+- **Discovery + Plan** — free for now. Two weeks. Output: the charter and the plan, ready for G1. You can take them anywhere.
 - **Build & launch** — scoped from the plan; hosted on pakëzdritë or on your stack.
 - **Pipeline engagement** — scoped per dataset; deliverable is a repository plus a report.
 

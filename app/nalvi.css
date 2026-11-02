@@ -755,14 +755,21 @@
 }
 .nalvi-pm-steps li::before {
   content: counter(step, decimal-leading-zero);
-  grid-row: span 2;
+  grid-column: 1;
+  grid-row: 1;
   padding-top: 0.15rem;
   color: var(--nalvi-accent);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.9375rem;
 }
+.nalvi-pm-steps li > * {
+  grid-column: 2;
+}
 .nalvi-pm-steps p {
   margin-top: 0.25rem;
+}
+.nalvi-pm-section .nalvi-pm-gate {
+  color: var(--nalvi-text);
 }
 .nalvi-pm-note {
   margin-top: 2rem;

@@ -99,28 +99,62 @@ export const HOME_LABEL = '← All of my work';
 export const WHERE =
   'Tampa Bay, Florida · Remote across the US · Contract or fractional';
 
-export const METHOD: readonly { title: string; body: string }[] = [
+/**
+ * The engagement ladder. Phase names, gate names and questions come from
+ * ~/Desktop/PA/Project_Management/PLAYBOOK.md (the master: if they differ, the
+ * playbook wins); `get` is its exit deliverable, in client language.
+ */
+export type MethodStep = {
+  title: string;
+  question: string;
+  get: string;
+  gate?: string;
+};
+export const METHOD: readonly MethodStep[] = [
   {
-    title: 'A call',
-    body: 'Thirty minutes on what you’re trying to learn or ship, and by when. Free, and no obligation after it.',
+    title: 'Intake',
+    question: 'Should we do this, and on what basis?',
+    get: 'A thirty-minute call, then a written intake. Paid, favor or equity is decided and written down.',
   },
   {
-    title: 'A diagnostic',
-    body: 'I read the code, the data and the plan, and talk to the people. You get a written scope: what exists, what’s missing, what it will take.',
+    title: 'Discovery',
+    question:
+      'What exactly is being launched, for whom, and what does “launched” mean?',
+    get: 'A charter: goal, what is in and out of scope, success metrics, stakeholders, constraints and an audit of what you already have.',
   },
   {
-    title: 'Requirements and a decision record',
-    body: 'Every piece of work gets a numbered requirement. Every decision is written down with who made it and why, so a settled question stays settled.',
+    title: 'Plan',
+    question: 'How do we get there and by when?',
+    get: 'Milestones, a work breakdown, owners and dates, a risk log, and an agreed cadence. A proposal and engagement letter if the work is paid.',
+    gate: 'G1 — plan approved',
   },
   {
-    title: 'Milestones with gates',
-    body: 'Each milestone ends with checks anyone can run and a written handback. Nothing is called done until it has been run.',
+    title: 'Build',
+    question: 'Are we making the thing, on track, with scope under control?',
+    get: 'Weekly status updates, meeting notes, a written change request for any scope change, and the deliverables themselves.',
+    gate: 'G2 — launch readiness',
   },
   {
-    title: 'Handover',
-    body: 'Documentation, runbooks, and a team that can carry the work on without me.',
+    title: 'Launch',
+    question:
+      'Does it go live cleanly, and does it work in the first two weeks?',
+    get: 'A launch checklist run, a go/no-go record, a one-page launch-day runbook and a review at fourteen days.',
+  },
+  {
+    title: 'Close',
+    question: 'Can you run it without me, and what did we learn?',
+    get: 'Handoff, training, transfer of every account to you, and a retrospective.',
+    gate: 'G3 — closed',
   },
 ];
+export const GATE_DECIDES: Record<string, string> = {
+  'G1 — plan approved':
+    'You approve the plan, in writing. Nothing is built before that.',
+  'G2 — launch readiness':
+    'The checklist is green, or red and you accept the red in writing.',
+  'G3 — closed':
+    'You hold everything and can run it yourself. Then we are done.',
+};
 export const METHOD_PROOF =
   'It’s how PakezDrite.com was built: every change traces to a numbered requirement, and every decision is on record with who made it and why.';
 
