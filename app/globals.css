@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* The page's own palette lives in nalvi.css (.nalvi-page). This is only the
+   base: Tailwind's reset, a dark colour scheme, and the 16px body (NFR-04 on
+   pakezdrite.com; the same floor here — never below the browser default, so
+   200% zoom works). */
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
