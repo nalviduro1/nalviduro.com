@@ -74,8 +74,9 @@ export function mailto(subject: string): string {
 export const CONTACT = mailto('Work with me');
 export const BOOK_LABEL = 'Book a 30-minute call';
 // PERS-16 (D-49): one booking link for every "Book a call" button on the site.
-// Until Nalvi supplies a scheduling URL this opens an email asking for a time.
-export const BOOKING_URL: string | null = null;
+// Google Calendar appointment schedule; falls back to an email if unset.
+export const BOOKING_URL: string | null =
+  'https://calendar.app.google/sR7U3TjHeMdN5w7d6';
 export const CALENDAR_HREF = BOOKING_URL ?? mailto('Let’s find a time');
 const VCARD_LABEL = 'Save Contact';
 const VCARD_HREF = '/Nalvi_Duro.vcf';
