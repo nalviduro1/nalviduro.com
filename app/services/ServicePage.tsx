@@ -411,6 +411,12 @@ export function ServicePage({ spec }: { spec: ServiceSpec }) {
             </Section>
           )}
 
+          {spec.article && (
+            <Section id="article" title={spec.article.title}>
+              <div className="nalvi-article">{spec.article.body}</div>
+            </Section>
+          )}
+
           {spec.roles && spec.roles.length > 0 && (
             <Section id="roles" title={ROLES_TITLE}>
               <ul className="nalvi-pm-roles">

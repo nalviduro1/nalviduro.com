@@ -771,6 +771,25 @@
 .nalvi-pm-section .nalvi-pm-gate {
   color: var(--nalvi-text);
 }
+.nalvi-article {
+  max-width: 40rem;
+}
+.nalvi-article h3 {
+  margin-top: 2rem;
+}
+.nalvi-article p,
+.nalvi-article ol {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+.nalvi-article ol {
+  padding-left: 1.25rem;
+  list-style: decimal;
+  color: var(--nalvi-muted);
+}
+.nalvi-article a {
+  text-decoration: underline;
+}
 .nalvi-pm-note {
   margin-top: 2rem;
   max-width: 48rem;

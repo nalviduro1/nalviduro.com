@@ -13,9 +13,14 @@ Numbers marked TODO are Nalvi's to confirm; nothing unverified goes on the site.
 
 Nalvi Duro, Tampa. Computational biologist by day (pangenome program at the VA, via Booz Allen): long-read assembly, pangenomics, metabolomics/PheWAS, HPC pipelines on LSF. Before that, a construction project manager in Europe (TODO: years, largest project size/budget, team size).
 
-Operator, not only adviser:
-- Built and runs pakëzdritë (pakezdrite.com), a bilingual Albanian/English job board and marketplace for Tampa Bay — live since 2026-09-25; LLC formed 2026-10-17. TODO: listings, sign-ups.
-- Published `assembly-qc-processing` (GitHub, MIT, CI), 2026-10-25.
+## Track record (each line: confirmed by a file or by Nalvi; unverified is omitted)
+
+- **Construction project manager, Europe.** TODO from Nalvi: years, largest project (size or budget), team size. Omitted from the site until then.
+- **VA Million Veteran Program pangenome (Booz Allen Hamilton).** Project Lead | Bioinformatician: leads a bioinformatics research team (requirements, scope, milestones, resources, delegation). Scope: a human pangenome on the VA Boston LSF cluster — HiFi assemblies, Minigraph-Cactus graph, QC of the delivered assemblies. Source: `~/Desktop/PA/briefs/Pangenome.md`. **Program counts (assemblies, haplotypes) are internal and not published here** unless Nalvi clears them for the site.
+- **pakëzdritë (pakezdrite.com).** Sole operator; live and public since 2026-09-25 (`briefs/pakezdrite.md`). LLC formed 2026-10-17 (per Nalvi; not confirmed by any file in `PA/`). Latest dated figures in the briefs: 10 businesses and 9 services listed on 2026-10-02; 39 sign-ups for the 2026-10-17 event on 2026-10-11. Stale; Nalvi supplies today's numbers (plan item 2).
+- **`assembly-qc-processing`.** Public on GitHub since 2026-10-25, MIT licence, CI (`selftests`) passing on the first push; a Snakemake workflow for QC → processing → QC of diploid HiFi assemblies (checked with `gh`, 2026-11-02).
+
+Roles:
 - President, AANO Tampa Bay chapter; treasurer, AANO national (elected at the 2026-08-07→09 convention); secretary, National Albanian Registry. Day-to-day: venues, ticketing, attendee communication, sponsors.
 
 ## Events (2026)

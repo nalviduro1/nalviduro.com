@@ -87,19 +87,19 @@ const SPEC: ServiceSpec = {
       title: 'Diagnostic',
       length: 'About 2 weeks',
       body: 'Fixed scope, fixed price. A look at a pipeline or analysis that has stalled, ending in a written plan you keep.',
-      price: { fill: 'starting price, or “on request”' },
+      price: 'On request',
     },
     {
       title: 'Pipeline or analysis project',
       length: 'Fixed scope',
       body: 'A defined deliverable in milestones, each ending at a gate and a written handback.',
-      price: { fill: 'how you price a project, or “on request”' },
+      price: 'On request',
     },
     {
       title: 'Clip, series or interactive',
       length: 'About 2 weeks per clip; interactive scoped per structure',
       body: 'One structure or mechanism with two rounds of revisions, a set of clips in one look, or a browser embed.',
-      price: { fill: 'starting price per clip, and how you price a set' },
+      price: 'On request',
     },
   ],
   // PERS-29: the BIOS walker loop plays behind the hero, full width, the copy on top of it
