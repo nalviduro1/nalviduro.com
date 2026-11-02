@@ -3,7 +3,7 @@
 Fields marked TODO are Nalvi's to fill.
 
 ## One sentence
-I help owner-operators turn a service, a product, or a dataset into something that runs: a plan with gates, a site that sells, and pipelines that produce.
+I help owner-operators turn their vision into reality.
 
 ## Who it's for
 - Owners who sell a service in person (events, production, hospitality) and need a site that books, sells, and follows up without them.

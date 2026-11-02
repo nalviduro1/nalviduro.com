@@ -54,6 +54,8 @@ import { Spotlight } from './Spotlight';
  * the services page. It reads its contact links and project cards from here.
  */
 export const NAME = 'Nalvi Duro';
+// content/OFFER.md → "One sentence": who is helped and with what. The home <h1>.
+export const OFFER = 'I help owner-operators turn their vision into reality.';
 const ROLE =
   'Independent contractor for pipeline development, data analysis, project management and protein animation.';
 export const TAGLINE =
@@ -390,7 +392,10 @@ export function NalviPage({ card = false }: { card?: boolean }) {
             />
           </div>
           <div className="nalvi-id">
-            <h1 className="nalvi-name">{NAME}</h1>
+            <div className="nalvi-heading">
+              <p className="nalvi-eyebrow">{NAME}</p>
+              <h1 className="nalvi-name">{OFFER}</h1>
+            </div>
             <Actions />
           </div>
           <div className="nalvi-photo">
